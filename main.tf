@@ -37,7 +37,7 @@ provider "aws" {
 variable "git_repo_url" {
   description = "HTTPS URL of the BookNook Git repository to deploy"
   type        = string
-  default     = "https://github.com/your-username/booknook.git" # <-- CHANGE THIS
+  default     = "https://github.com/Sumukha-Rao/booknook2.git" # <-- CHANGE THIS
 }
 
 variable "aws_region" {
