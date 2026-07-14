@@ -1,5 +1,12 @@
+//to test website
 curl -X POST http://booknook-lb-2013368271.ap-south-1.elb.amazonaws.com/api/login \
   -H "Content-Type: application/json" \
   -d '{"username":"admin","password":"admin123"}'
 
+//to test load balancing
 for i in {1..10}; do curl -s -o /dev/null -w "%{remote_ip}\n" http://booknook-lb-2013368271.ap-south-1.elb.amazonaws.com/health; done
+
+//stress test for auto scaling
+sudo apt update
+sudo apt install -y stress-ng
+stress-ng --temp-path /tmp --cpu 2 --timeout 60s --metrics-brief
