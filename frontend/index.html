@@ -141,7 +141,7 @@
 <script>
 // For local dev this points at the API; in production it is rewritten to ""
 // (same-origin) so CloudFront proxies /api/* to the load balancer.
-const API = "http://localhost:3000";
+const API = "";
 
 let token = localStorage.getItem('bn_token') || '';
 let user = JSON.parse(localStorage.getItem('bn_user') || 'null');
